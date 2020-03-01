@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+input, select, textarea {
+	outline: none !important;
+}
+
+*:not(i) {
+	transition: all .4s ease;
+	font-family: 'Ubuntu', ;
+}
+
+.text-center {
+	text-align: center;
+}
+.p-0 {padding: 0 !important;}
+.pt-60 {padding-top: 60px !important;}
+.pb-60 {padding-bottom: 60px !important;}
+.h-100vh {min-height: 100vh}
+.flex {display: flex;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-center {align-items: center;}
+.flex-justify-center {justify-content: center;}
+.flex-justify-space-between {justify-content: space-between;}
+
+.custom-loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 13px;
+}
+
+.custom-loader.center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.custom-loader div {
+  position: absolute;
+  top: 0px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #3298dc;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.custom-loader div:nth-child(1) {
+  left: 8px;
+  animation: custom-loader1 0.6s infinite;
+}
+.custom-loader div:nth-child(2) {
+  left: 8px;
+  animation: custom-loader2 0.6s infinite;
+}
+.custom-loader div:nth-child(3) {
+  left: 32px;
+  animation: custom-loader2 0.6s infinite;
+}
+.custom-loader div:nth-child(4) {
+  left: 56px;
+  animation: custom-loader3 0.6s infinite;
+}
+@keyframes custom-loader1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes custom-loader3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes custom-loader2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+
+body.dark {
+  background-color: #212121 !important;
+  section, input {
+    background-color: #212121 !important;
+  }
+
+  nav, button {
+    background-color: #434343 !important;
+  }
+
+  h1,h2,h3,h4,h5,h6,p,a,li,span,label {
+    color: orange !important;
+  }
+
+  input {
+    color: #eee !important;
+  }
+
+  a:hover , button:hover{
+    background-color: #343434 !important;
+  }
+
+  .weather-wrap::before {
+    background-color: rgba(#000, .65) !important;
+  }
+
+  .favorites .favorite {
+    background-color: #010617 !important;
+  }
+}
